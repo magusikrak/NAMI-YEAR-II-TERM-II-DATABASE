@@ -1,0 +1,8 @@
+Objectives:
+Define is PL/SQL and its structure
+Identify the architecture used to process PL/SQL
+Determine the sytnax for loops in PL/SQL
+Basic LOOP
+EXIT WHEN 
+WHILE LOOP
+FOR LOOP

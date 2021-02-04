@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<!-- saved from url=(0146)https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&course_id=_85724_1&content_id=_5042061_1&step=null -->
+<html lang="en-GB-NILE390040" class="ally-learn-version-3900-4-0 ally-learn-version-3900-4-x ally-learn-version-3900-x-x"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Take Test: Topic 17 - Triggers – 18/19 Databases 2 (NAMI...</title>
+  
+  <meta id="request-method" name="request-method" content="GET">
+  <meta name="author" content="Blackboard">
+  <meta name="copyright" content="© 1997-2021 Blackboard Inc. All Rights Reserved. US Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.">
+  <meta name="keywords" content="Blackboard">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/232bf20b67"></script><script src="./Take Test_ Topic 17 - Triggers –_files/nr-1194.min.js.download"></script><script type="text/javascript" async="" src="./Take Test_ Topic 17 - Triggers –_files/analytics.js.download"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"232bf20b67",applicationID:"495293889"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1194.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <link rel="SHORTCUT ICON" type="image/x-icon" href="https://nile.northampton.ac.uk/ui/bb-icon3.ico">
+     <link rel="stylesheet" type="text/css" href="./Take Test_ Topic 17 - Triggers –_files/shared.css" id="css_0">
+     <link rel="stylesheet" type="text/css" href="./Take Test_ Topic 17 - Triggers –_files/theme.css" id="css_1">
+     <link rel="stylesheet" type="text/css" href="./Take Test_ Topic 17 - Triggers –_files/assessment.css" id="css_2">
+     <link rel="stylesheet" type="text/css" href="./Take Test_ Topic 17 - Triggers –_files/assessment(1).css" id="css_3">
+     <link rel="stylesheet" type="text/css" href="./Take Test_ Topic 17 - Triggers –_files/prism.css" id="css_4">
+     <link rel="stylesheet" type="text/css" href="./Take Test_ Topic 17 - Triggers –_files/video-integration.css" id="css_5">
+     <link rel="stylesheet" type="text/css" href="./Take Test_ Topic 17 - Triggers –_files/ally-integration.css" id="css_6">
+          <style>
+    BODY.bbDefault {
+    FONT-SIZE: 0.9em
+    }
+    BODY.bbDefault TD {
+    FONT-SIZE: 0.9em
+    }
+  </style>
+  
+       <link rel="stylesheet" type="text/css" media="print" href="./Take Test_ Topic 17 - Triggers –_files/print.css">
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/i18n.js.download"></script>
+      <script language="javascript" type="text/javascript">
+
+var JS_RESOURCES = new Object();
+
+function _init_bundle_JS_RESOURCES() {
+
+    JS_RESOURCES['validation.email'] = 'A fully qualified email address (for example, info@blackboard.com) must be entered.';
+    JS_RESOURCES['validation.radio.required'] = 'Make a selection to continue.';
+    JS_RESOURCES['assessment.incomplete.confirm.backtrackProhibited.survey'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the survey. Click OK to save the incomplete answer.';
+    JS_RESOURCES['common.list.separator.comma'] = '{0}, {1}';
+    JS_RESOURCES['active.filter.search.terms'] = 'Search Terms';
+    JS_RESOURCES['validation.points.decimal.places.error.location'] = 'Point Values are limited to five decimal places: {0}.';
+    JS_RESOURCES['validation.maximum_length.plural'] = 'Must not contain more than {1} characters: {0}.\nReduce the size of the input by {2} characters.';
+    JS_RESOURCES['assessment.incomplete.confirm.backtrackProhibited'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the test. Click OK to save the incomplete answer.';
+    JS_RESOURCES['validation.multiSelect.minItems'] = 'Multiselect box should contain at least {0} number of items.';
+    JS_RESOURCES['validation.cmp_field.required'] = 'A value must be provided for {0}\nwhen {1} field is not empty';
+    JS_RESOURCES['warning.email'] = 'Email address is a recommended field. Users will be unable to use parts of the system without an email address.';
+    JS_RESOURCES['validation.maximum_length.no_name.singular'] = 'Must not contain more than {0} characters.\nReduce the size of the input by one character.';
+    JS_RESOURCES['validation.multiSelect.maxItems'] = 'Multiselect box should not contain more than {0} number of items.';
+    JS_RESOURCES['validation.number'] = 'A valid numeric value must be entered: {0}.';
+    JS_RESOURCES['validation.date.required'] = 'A complete date value must be provided: {0}.';
+    JS_RESOURCES['portalmodule.section.remove'] = 'Delete: {0}?';
+    JS_RESOURCES['show.helptext'] = 'Show Help Text';
+    JS_RESOURCES['validation.password'] = 'Password cannot be empty or contain only spaces.';
+    JS_RESOURCES['validation.percent'] = 'A valid per-cent value between 0 and 100 must be entered.';
+    JS_RESOURCES['validation.mismatch'] = 'The values entered do not match: {0}.\nConfirm: {0}.';
+    JS_RESOURCES['validation.maximum_length.no_name.plural'] = 'Must not contain more than {0} characters.\nReduce the size of the input by {1} characters.';
+    JS_RESOURCES['validation.invalid_value'] = 'Invalid numeric value provided: {0}.';
+    JS_RESOURCES['field_name.substitute'] = '\'\'{0}\'\' input field';
+    JS_RESOURCES['validation.required'] = 'A value must be provided: {0}.';
+    JS_RESOURCES['active.filter.free.form.text.blank'] = 'Specify a value for the search text field';
+    JS_RESOURCES['validate.alignment.missing.content'] = 'You selected alignments, but did not select any alignable content to copy.';
+    JS_RESOURCES['validation.system_role.reserve'] = '"bb" is not permitted at the beginning of a role ID.';
+    JS_RESOURCES['validation.date_past'] = 'The end date cannot be earlier than the start date.';
+    JS_RESOURCES['validation.invalid_chars'] = 'Contains illegal characters: {0}.\nDelete these characters: {1}';
+    JS_RESOURCES['confirm.delete_item_value'] = 'This item {0} will be deleted. Continue?';
+    JS_RESOURCES['hide.helptext'] = 'Hide Help Text';
+    JS_RESOURCES['validate.range.lessthen.str'] = 'Less Than {0}';
+    JS_RESOURCES['validation.date_past.confirm'] = 'The time is in the past.\nContinue with this time?';
+    JS_RESOURCES['validate.login.invalid.username.or.pass'] = 'Enter a username and password.';
+    JS_RESOURCES['validation.negative'] = 'A valid non-negative value must be entered: {0}.';
+    JS_RESOURCES['validation.url'] = 'A valid URL (for example, http://www.myuniversity.ac.uk) must be entered.';
+    JS_RESOURCES['validate.range.overlap'] = 'criteria ({0}) overlaps criteria ({1}).';
+    JS_RESOURCES['validate.range.between.str'] = 'Between {0} and {1}';
+    JS_RESOURCES['validation.portal.tool.items.remove'] = 'Delete: {0}?';
+    JS_RESOURCES['validation.association.refresh.confirm'] = 'The associated items information might have been updated.\nClick \'OK\' to refresh the list or click \'Cancel\' to keep the current page.';
+    JS_RESOURCES['validate.enrolloptions.error.codeconflict'] = 'The Access Code Enrolment option conflicts with the selection of {instructor} Led enrolment.';
+    JS_RESOURCES['validation.points.decimal.places'] = 'Point Values are limited to five decimal places.';
+    JS_RESOURCES['validation.option.required'] = 'At least one option must be selected from the list.';
+    JS_RESOURCES['list.checkToSelectAllItems'] = 'Tick to select all items';
+    JS_RESOURCES['active.filter.changed.alert'] = 'criteria now contain';
+    JS_RESOURCES['vtbe.artifact.footer.validate.nameIfSaveArtifact'] = 'Specify a Name in order to Save as a Reusable Object.';
+    JS_RESOURCES['validate.invalidate.number'] = 'Please input valid number instead of {0}.';
+    JS_RESOURCES['validation.valid_course_id'] = 'Course ID contains illegal characters or multibyte characters.';
+    JS_RESOURCES['assessment.incomplete.confirm'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the test. Click OK to submit assessment.';
+    JS_RESOURCES['validate.enrolloptions.error.nooption'] = 'Warning: Choose either the {instructor} Led or the Self-Enrolment option.';
+    JS_RESOURCES['validation.date_equal'] = 'The start date cannot be equal to the end date.';
+    JS_RESOURCES['validation.cmp_field.rejected'] = 'The {0} cannot be used without a corresponding {1} value.';
+    JS_RESOURCES['validation.time.required'] = 'A complete time value must be provided: {0}.';
+    JS_RESOURCES['validation.integer_number'] = 'A valid integer numeric value must be entered: {0}.';
+    JS_RESOURCES['validation.maximum_length'] = 'Must not contain more than 255 characters';
+    JS_RESOURCES['validate.enrolloptions.error.emailrequestconflict'] = 'The selected email enrolment option conflicts with the self-enrolment selection.';
+    JS_RESOURCES['invalid_char.space'] = 'space';
+    JS_RESOURCES['validate.range.morethen.str'] = 'More Than {0}';
+    JS_RESOURCES['notification.submit'] = 'Action already submitted.\nWait until the action is complete.';
+    JS_RESOURCES['validation.plain_text.confirm'] = 'To display equations correctly in this document, Smart Text or HTML format must be selected.\nClick \'OK\' to save in selected Plain Text format or click \'Cancel\' to select a new format.';
+    JS_RESOURCES['invalid_char.comma'] = 'comma';
+    JS_RESOURCES['validation.allow_negtive.percent'] = 'A valid per-cent value between -100 and 100 must be entered.';
+    JS_RESOURCES['confirm.remove_item'] = 'This action is final and cannot be undone. Continue?';
+    JS_RESOURCES['list.uncheckToDeselectAllItems'] = 'Untick to deselect all items';
+    JS_RESOURCES['validation.maximum_length.singular'] = 'Must not contain more than {1} characters: {0}.\nReduce the size of the input by one character.';
+    JS_RESOURCES['validation.rubric.decimalplaces'] = 'Too many decimal places. Maximum is five.';
+    JS_RESOURCES['validation.minimum_length'] = 'A minimum of {0} characters must be entered: {1}.';
+    JS_RESOURCES['vtbe.artifact.footer.validate.saveLocationIfSaveArtifact'] = 'Specify a location for the Reusable Object.';
+    JS_RESOURCES['assessment.incomplete.confirm.survey'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the survey. Click OK to submit assessment.';
+    JS_RESOURCES['validation.image_type'] = 'Unknown image type: {0}. Image may not display correctly.';
+    JS_RESOURCES['validate.invalidate.number.space'] = 'Space';
+
+    JS_RESOURCES.getString = i18n_get_string;
+    JS_RESOURCES.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_JS_RESOURCES();
+
+</script>
+<script language="javascript" type="text/javascript">
+
+var LOCALE_SETTINGS = new Object();
+
+function _init_bundle_LOCALE_SETTINGS() {
+
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_FIELD_ORDER'] = 'STREET_1 STREET_2 CITY STATE ZIP_CODE COUNTRY';
+    LOCALE_SETTINGS['number_format.exponent'] = 'eE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.2'] = '{1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.YEAR_CHARACTER.03255'] = '';
+    LOCALE_SETTINGS['BBI18N.SOLARIS_CHARSET'] = 'ISO8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.1'] = '{0}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_MONTH.03255'] = 'ddd';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.internal_date_format'] = 'dd/MM/yy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_MONTH.03259'] = 'MMMM yyyy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.TIME_ORDER.00519'] = 'HMP';
+    LOCALE_SETTINGS['float.format'] = '^([0-9]{1,3}(\\,[0-9]{3})*(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.SORT_COLUMN'] = 'familyName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT'] = '{1} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_SHORT.02097'] = 'MON TUE WED THU FRI SAT SUN';
+    LOCALE_SETTINGS['float.allow.negative.format'] = '^((([-]?[0-9]{1,3}(\\,[0-9]{3})*)|[-]?[0-9]*)(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TYPE'] = 'GREGORIAN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GIVEN_INITIAL_FAMILY_NAME'] = '{4} {3}';
+    LOCALE_SETTINGS['efloat.format'] = '^[+-]?[0-9]*(\\.[0-9]+)?([eE][+-]?[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_WEEK.03260'] = 'd MMM[ yyyy]{\'&#8212;\'d MMM, yyyy}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL.02100'] = 'January February March April May June July August September October November December';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI_LOCALIZED.00521'] = 'NO';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.LONG'] = '{0} {1} {2} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.WORK_FIELD_ORDER'] = 'JOB_TITLE DEPARTMENT COMPANY B_PHONE_1 B_PHONE_2 B_FAX';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL_HIJRI.02100'] = 'Muḥarram,Ṣafar,Rabīʿ\'al-Awwal,Rabīʿ\'ath-Thānī,Jumādā\'al-Ūlā,Jumādā\'ath-Thāniya,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GREETING'] = 'Welcome, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT.00520'] = 'Jan Feb  Mar Apr  May Jun Jul Aug Sep Oct Nov Dec';
+    LOCALE_SETTINGS['number_format.thousands_sep'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_WEEK.03256'] = 'ddd d/M';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT_SURNAME'] = '{3}, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.AM_PM.00522'] = 'AM PM';
+    LOCALE_SETTINGS['number_format.negative_prefix'] = '-';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DATE_ORDER.00519'] = 'DMY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.PHONE_FIELD_ORDER'] = 'H_PHONE_1 H_PHONE_2 H_FAX M_PHONE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_MIN.02099'] = 'MON TUE WED THU FRI SAT SUN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.24HR_SUPPORT.03208'] = '1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.FIRST_DAY_OF_WEEK.03207'] = '1';
+    LOCALE_SETTINGS['BBI18N.WINDOWS_CHARSET'] = 'ISO-8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT_HIJRI.00520'] = 'Muḥarram,Ṣafar,Rabīʿ\'I,Rabīʿ\'II,Jumādā\'I,Jumādā\'II,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['BBI18N.LINUX_CHARSET'] = 'iso88591';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_CHARACTER.03253'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_CHARACTER.03254'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN_ORDER'] = 'title,givenName,middleName,familyName,suffix,otherName';
+    LOCALE_SETTINGS['number_format.decimal_point'] = '.';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_DAY.03258'] = 'dddd, d MMM, yyyy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAYS.00521'] = '01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_FULL.02098'] = 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.date_display_pattern'] = 'DD/MM/YY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.EXTENDED_SURNAME'] = '{3}';
+    LOCALE_SETTINGS['thousand.sep.format'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI.00521'] = '0 1 2 3 4 5 6 7 8 9';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_ORDER.07832'] = 'street,city,region,postal_code,country';
+    LOCALE_SETTINGS['number_format.negative_suffix'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_DAY.03257'] = 'dddd d/M';
+
+    LOCALE_SETTINGS.getString = i18n_get_string;
+    LOCALE_SETTINGS.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_LOCALE_SETTINGS();
+
+</script>
+
+      <script language="javascript" type="text/javascript">
+
+var LOCALE_SETTINGS = new Object();
+
+function _init_bundle_LOCALE_SETTINGS() {
+
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_FIELD_ORDER'] = 'STREET_1 STREET_2 CITY STATE ZIP_CODE COUNTRY';
+    LOCALE_SETTINGS['number_format.exponent'] = 'eE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.2'] = '{1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.YEAR_CHARACTER.03255'] = '';
+    LOCALE_SETTINGS['BBI18N.SOLARIS_CHARSET'] = 'ISO8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.1'] = '{0}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_MONTH.03255'] = 'ddd';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.internal_date_format'] = 'dd/MM/yy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_MONTH.03259'] = 'MMMM yyyy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.TIME_ORDER.00519'] = 'HMP';
+    LOCALE_SETTINGS['float.format'] = '^([0-9]{1,3}(\\,[0-9]{3})*(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.SORT_COLUMN'] = 'familyName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT'] = '{1} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_SHORT.02097'] = 'MON TUE WED THU FRI SAT SUN';
+    LOCALE_SETTINGS['float.allow.negative.format'] = '^((([-]?[0-9]{1,3}(\\,[0-9]{3})*)|[-]?[0-9]*)(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TYPE'] = 'GREGORIAN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GIVEN_INITIAL_FAMILY_NAME'] = '{4} {3}';
+    LOCALE_SETTINGS['efloat.format'] = '^[+-]?[0-9]*(\\.[0-9]+)?([eE][+-]?[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_WEEK.03260'] = 'd MMM[ yyyy]{\'&#8212;\'d MMM, yyyy}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL.02100'] = 'January February March April May June July August September October November December';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI_LOCALIZED.00521'] = 'NO';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.LONG'] = '{0} {1} {2} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.WORK_FIELD_ORDER'] = 'JOB_TITLE DEPARTMENT COMPANY B_PHONE_1 B_PHONE_2 B_FAX';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL_HIJRI.02100'] = 'Muḥarram,Ṣafar,Rabīʿ\'al-Awwal,Rabīʿ\'ath-Thānī,Jumādā\'al-Ūlā,Jumādā\'ath-Thāniya,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GREETING'] = 'Welcome, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT.00520'] = 'Jan Feb  Mar Apr  May Jun Jul Aug Sep Oct Nov Dec';
+    LOCALE_SETTINGS['number_format.thousands_sep'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_WEEK.03256'] = 'ddd d/M';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT_SURNAME'] = '{3}, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.AM_PM.00522'] = 'AM PM';
+    LOCALE_SETTINGS['number_format.negative_prefix'] = '-';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DATE_ORDER.00519'] = 'DMY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.PHONE_FIELD_ORDER'] = 'H_PHONE_1 H_PHONE_2 H_FAX M_PHONE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_MIN.02099'] = 'MON TUE WED THU FRI SAT SUN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.24HR_SUPPORT.03208'] = '1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.FIRST_DAY_OF_WEEK.03207'] = '1';
+    LOCALE_SETTINGS['BBI18N.WINDOWS_CHARSET'] = 'ISO-8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT_HIJRI.00520'] = 'Muḥarram,Ṣafar,Rabīʿ\'I,Rabīʿ\'II,Jumādā\'I,Jumādā\'II,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['BBI18N.LINUX_CHARSET'] = 'iso88591';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_CHARACTER.03253'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_CHARACTER.03254'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN_ORDER'] = 'title,givenName,middleName,familyName,suffix,otherName';
+    LOCALE_SETTINGS['number_format.decimal_point'] = '.';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_DAY.03258'] = 'dddd, d MMM, yyyy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAYS.00521'] = '01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_FULL.02098'] = 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.date_display_pattern'] = 'DD/MM/YY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.EXTENDED_SURNAME'] = '{3}';
+    LOCALE_SETTINGS['thousand.sep.format'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI.00521'] = '0 1 2 3 4 5 6 7 8 9';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_ORDER.07832'] = 'street,city,region,postal_code,country';
+    LOCALE_SETTINGS['number_format.negative_suffix'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_DAY.03257'] = 'dddd d/M';
+
+    LOCALE_SETTINGS.getString = i18n_get_string;
+    LOCALE_SETTINGS.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_LOCALE_SETTINGS();
+
+</script>
+
+         <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/cdn.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/60E1860DE953BAC402C07745B8C89372.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/UserDataDWRFacade.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/MashupDWRFacade.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/mathImg.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/titlebartagutils.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/engine.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/assessment.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/widget.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/CourseMenuDWRFacade.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/BFDFB2C9428968F1B63199301E74CDAA.js.download"></script>
+    <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/builder.js.download"></script><script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/effects.js.download"></script><script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/dragdrop.js.download"></script><script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/controls.js.download"></script><link rel="stylesheet" type="text/css" href="./Take Test_ Topic 17 - Triggers –_files/learn.7e9fc74c7b44d1e43e533d62e3e21dde.css"></head>
+  <body id="learn-oe-body">
+  
+<div class="locationPane">
+ <div role="main" id="contentPanel" class="contentPaneWide ">
+    
+  <div id="content" class="contentBox ">
+   
+<div id="pageTitleDiv" class="pageTitle clearfix ">
+
+  
+<div id="pageTitleBar" class="pageTitleIcon" tabindex="0">
+    <img src="./Take Test_ Topic 17 - Triggers –_files/test_on.svg" alt="" id="titleicon"><h1 id="pageTitleHeader" tabindex="-1"><span id="pageTitleText">
+  Take Test: Topic 17 - Triggers  </span></h1>
+        <span id="_titlebarExtraContent" class="titleButtons"></span>
+</div>
+
+
+
+</div>
+
+      <div class="container  clearfix" id="containerdiv" style="padding-bottom: 32px;">
+     <h2 class="hideoff">Content</h2>
+     <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/achievement.js.download"></script><script src="./Take Test_ Topic 17 - Triggers –_files/version_pinned_scriptaculous.js.download"></script><link rel="stylesheet" href="./Take Test_ Topic 17 - Triggers –_files/achievements.css" type="text/css" media="screen"><script type="text/javascript">
+new Ajax.Request('/webapps/achievements/checkAchievements.form', {
+method:'get',
+asynchronous:true,
+parameters: {courseId: '_85724_1', type: 1 },
+onSuccess: function(response) {
+var jsonArray = response.responseJSON;
+handleAchievements(jsonArray);
+},
+onFailure: function() { alert('Something went wrong...'); }
+});
+</script><form name="saveAttemptForm" id="bb-take-assessment" method="post" action="https://nile.northampton.ac.uk/webapps/assessment/do/take/saveAttempt" enctype="multipart/form-data" onsubmit="return false;" style="margin: 0px;">  <input type="hidden" name="blackboard.platform.security.NonceUtil.nonce.ajax" id="blackboard.platform.security.NonceUtil.nonce.ajax" value="3729a508-3406-4b0e-80ec-500495958e7a">
+
+
+ 
+  <input type="hidden" name="data-submitted" id="data-submitted" value="true">
+
+
+ 
+  <input type="hidden" name="course_assessment_id" id="course_assessment_id" value="_27010_1">
+
+
+ 
+  <input type="hidden" name="course_id" id="course_id" value="_85724_1">
+
+
+ 
+  <input type="hidden" name="content_id" id="content_id" value="_5042061_1">
+
+
+ 
+  <input type="hidden" name="step" id="step" value="">
+
+
+ 
+  <input type="hidden" name="original_user_id" id="original_user_id" value="_253146_1">
+
+
+ 
+  <input type="hidden" name="save_and_submit" id="save_and_submit" value="">
+
+
+ 
+  <input type="hidden" name="timer_completion" id="timer_completion" value="">
+
+
+ 
+  <input type="hidden" name="fileUploadType" id="fileUploadType" value="">
+
+
+ 
+
+<a href="https://nile.northampton.ac.uk/webapps/assessment/accessibility.jsp" target="_blank" class="hideoff">Assistive Technology Tips [opens in new window]</a>
+<div id="instructionBlock" class="infoListWrapper">
+  <h3><a id="instructionsExpander_996300_1_9802664_1" class="open" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" title="Hide" aria-expanded="true"><img alt="" class="hideoff" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif"> Test Information</a></h3>
+  <div id="instructionsContainer_996300_1_9802664_1" style="zoom: 1;">
+    <h3 class="hideoff">Instructions</h3>
+    <table class="key-valueTable" summary="">
+        
+<tbody><tr valign="top">
+  <th scope="row" class="u_normalAlign"><span class="label">Description</span></th>
+  <td>
+
+
+  </td>
+</tr>
+
+<tr valign="top">
+  <th scope="row" class="u_normalAlign"><span class="label">Instructions</span></th>
+  <td>
+
+
+  </td>
+</tr>
+
+<tr valign="top">
+  <th scope="row" class="u_normalAlign"><span class="label">Multiple Attempts</span></th>
+  <td>
+
+This Test allows multiple attempts.
+  </td>
+</tr>
+
+<tr valign="top">
+  <th scope="row" class="u_normalAlign"><span class="label">Force Completion</span></th>
+  <td>
+
+This Test can be saved and resumed later.
+  </td>
+</tr>
+
+<tr valign="top">
+  <th scope="row" class="u_normalAlign"><span class="label"></span></th>
+  <td>
+
+Your answers are saved automatically.
+  </td>
+</tr>
+</tbody></table>
+    </div><!-- end div#instructionsContainer -->
+</div><!-- end div#infoListWrapper -->
+
+   <!-- portlet -->
+   <!-- The position:fixed style is required here so that the status bar may be re-positioned by setting style.top no matter which theme is chosen.-->
+<div class="assessmentPortlet" id="topbar" style="visibility: visible; left: 5px; top: 0px; width: 729px;">
+
+<!-- begin portletBlock -->
+  <div class="liveArea timer">
+
+    <div class="questionStatus">
+			
+  <input type="hidden" name="toggle_state" id="toggle_state" value="qShow">
+
+
+ 
+<h3 class="questionStatusLabel">
+       <button type="button" class="abutton" onclick="toggleElement(&#39;statusBlock&#39;); return false;">
+	    <img src="./Take Test_ Topic 17 - Triggers –_files/more_options_dark.gif" alt="Expand" title="Expand" id="statusBlockimg">
+			 Question Completion Status:</button></h3>
+
+       
+<div class="qShow" id="statusBlock" style="display: none;">
+<div class="completionContainer">
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_1&#39;);">
+            <span class="qIncomplete" id="span_1">1<img id="img_1" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_2&#39;);">
+            <span class="qIncomplete" id="span_2">2<img id="img_2" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_3&#39;);">
+            <span class="qIncomplete" id="span_3">3<img id="img_3" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_4&#39;);">
+            <span class="qIncomplete" id="span_4">4<img id="img_4" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_5&#39;);">
+            <span class="qIncomplete" id="span_5">5<img id="img_5" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_6&#39;);">
+            <span class="qIncomplete" id="span_6">6<img id="img_6" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_7&#39;);">
+            <span class="qIncomplete" id="span_7">7<img id="img_7" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_8&#39;);">
+            <span class="qIncomplete" id="span_8">8<img id="img_8" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_9&#39;);">
+            <span class="qIncomplete" id="span_9">9<img id="img_9" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_10&#39;);">
+            <span class="qIncomplete" id="span_10">10<img id="img_10" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+<button type="button" class="abutton" onclick="return assessment.inlineJumpTo(&#39;question_11&#39;);">
+            <span class="qIncomplete" id="span_11">11<img id="img_11" src="./Take Test_ Topic 17 - Triggers –_files/spacer.gif" width="1" height="1" align="middle" border="0" alt="Question Incomplete">
+            </span>
+       </button>
+</div>
+</div>
+
+
+
+
+</div> <!-- /.questionStatus -->
+
+  </div> <!-- /.timer -->
+</div>
+
+  <!-- assessment_js.jspf -->
+
+<script type="text/javascript">
+      setPadding(20);
+    </script>
+  <div id="dataCollectionContainer" style="position: relative; top: 59px;">
+<div class="submitStepTop">
+</div>
+
+     <div id="_9802666_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle1" class="steptitle">
+            Question 1
+      </h3>     <div id="stepcontent1" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_1">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Match the part of the trigger spec&nbsp;with its name</p>
+  </div>
+ 
+</legend>
+<table width="100%" class="matching-table">
+    <tbody><tr>
+      <td width="50%">
+      <table>
+      <tbody><tr>
+          <td class="matching-numbering"><script type="text/javascript">
+            formCheckList.addElement(new Check_Answer({ref_label:"1",name:"ma-ans-_9802666_1-0"}));
+          </script>
+             
+   
+   
+  
+ <select name="ma-ans-_9802666_1-0" id="ma-ans-_9802666_1-0" aria-labelledby="ma-lbl-_9802666_1-0 readAnswers_9802666_1">
+
+       <option value="">-</option>
+          <option value="0">A.</option>
+          <option value="1">B.</option>
+          <option value="2">C.</option>
+          <option value="3">D.</option>
+          <option value="4">E.</option>
+     </select>
+ 
+</td>
+          <td valign="top">
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802666_1-0" id="ma-lbl-_9802666_1-0"><p style="line-height: 90%; margin-top: 5.76pt; margin-bottom: 0pt; margin-left: .7in; text-indent: -.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging;"><span style="font-size: medium;"><span style="font-family: &#39;Franklin Gothic Book&#39;; color: black;">CREATE OR REPLACE TRIGGER </span><span style="font-family: &#39;Franklin Gothic Book&#39;; color: black;">trig_validate_surname</span></span></p> <p style="line-height: 90%; margin-top: 5.76pt; margin-bottom: 0pt; margin-left: .7in; text-indent: -.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; punctuation-wrap: hanging;"><span style="font-size: medium; font-family: &#39;Franklin Gothic Book&#39;; color: black;"></span></p> <br></label>
+  </div>
+ 
+
+</td>
+        </tr>
+        <tr>
+          <td class="matching-numbering"><script type="text/javascript">
+            formCheckList.addElement(new Check_Answer({ref_label:"1",name:"ma-ans-_9802666_1-1"}));
+          </script>
+             
+   
+   
+  
+ <select name="ma-ans-_9802666_1-1" id="ma-ans-_9802666_1-1" aria-labelledby="ma-lbl-_9802666_1-1 readAnswers_9802666_1">
+
+       <option value="">-</option>
+          <option value="0">A.</option>
+          <option value="1">B.</option>
+          <option value="2">C.</option>
+          <option value="3">D.</option>
+          <option value="4">E.</option>
+     </select>
+ 
+</td>
+          <td valign="top">
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802666_1-1" id="ma-lbl-_9802666_1-1"><p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 5.76pt 0px 0pt 0.7in; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; line-height: 11.7px; text-indent: -0.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline;"><span style="font-family: inherit; text-shadow: none !important; letter-spacing: normal !important; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: medium;"><span style="font-family: &#39;Franklin Gothic Book&#39;; color: black;">BEFORE INSERT ON&nbsp;</span><span style="font-family: &#39;Franklin Gothic Book&#39;; color: black;">table_name</span></span></p> <p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 5.76pt 0px 0pt 0.7in; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; line-height: 11.7px; text-indent: -0.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline;"></p> <br></label>
+  </div>
+ 
+
+</td>
+        </tr>
+        <tr>
+          <td class="matching-numbering"><script type="text/javascript">
+            formCheckList.addElement(new Check_Answer({ref_label:"1",name:"ma-ans-_9802666_1-2"}));
+          </script>
+             
+   
+   
+  
+ <select name="ma-ans-_9802666_1-2" id="ma-ans-_9802666_1-2" aria-labelledby="ma-lbl-_9802666_1-2 readAnswers_9802666_1">
+
+       <option value="">-</option>
+          <option value="0">A.</option>
+          <option value="1">B.</option>
+          <option value="2">C.</option>
+          <option value="3">D.</option>
+          <option value="4">E.</option>
+     </select>
+ 
+</td>
+          <td valign="top">
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802666_1-2" id="ma-lbl-_9802666_1-2"><p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 5.76pt 0px 0pt 0.7in; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; line-height: 11.7px; text-indent: -0.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline;"><span style="font-family: &#39;Franklin Gothic Book&#39;; text-shadow: none !important; letter-spacing: normal !important; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: medium; color: black;">FOR EACH ROW</span></p> <p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 5.76pt 0px 0pt 0.7in; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; line-height: 11.7px; text-indent: -0.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline;"></p></label>
+  </div>
+ 
+
+</td>
+        </tr>
+        <tr>
+          <td class="matching-numbering"><script type="text/javascript">
+            formCheckList.addElement(new Check_Answer({ref_label:"1",name:"ma-ans-_9802666_1-3"}));
+          </script>
+             
+   
+   
+  
+ <select name="ma-ans-_9802666_1-3" id="ma-ans-_9802666_1-3" aria-labelledby="ma-lbl-_9802666_1-3 readAnswers_9802666_1">
+
+       <option value="">-</option>
+          <option value="0">A.</option>
+          <option value="1">B.</option>
+          <option value="2">C.</option>
+          <option value="3">D.</option>
+          <option value="4">E.</option>
+     </select>
+ 
+</td>
+          <td valign="top">
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802666_1-3" id="ma-lbl-_9802666_1-3"><p><span style="color: #000000; font-family: &#39;Franklin Gothic Book&#39;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: -28.8px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">REFERENCING OLD AS existing</span></p></label>
+  </div>
+ 
+
+</td>
+        </tr>
+        <tr>
+          <td class="matching-numbering"><script type="text/javascript">
+            formCheckList.addElement(new Check_Answer({ref_label:"1",name:"ma-ans-_9802666_1-4"}));
+          </script>
+             
+   
+   
+  
+ <select name="ma-ans-_9802666_1-4" id="ma-ans-_9802666_1-4" aria-labelledby="ma-lbl-_9802666_1-4 readAnswers_9802666_1">
+
+       <option value="">-</option>
+          <option value="0">A.</option>
+          <option value="1">B.</option>
+          <option value="2">C.</option>
+          <option value="3">D.</option>
+          <option value="4">E.</option>
+     </select>
+ 
+</td>
+          <td valign="top">
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802666_1-4" id="ma-lbl-_9802666_1-4"><p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 5.76pt 0px 0pt 0.7in; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; line-height: 11.7px; text-indent: -0.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline;"><span style="font-family: &#39;Franklin Gothic Book&#39;; text-shadow: none !important; letter-spacing: normal !important; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-size: medium; color: black;">WHEN (…)</span></p> <br></label>
+  </div>
+ 
+
+</td>
+        </tr>
+        </tbody></table>
+      </td>
+      <td width="50%">
+      <div>
+        <table id="readAnswers_9802666_1" tabindex="-1">
+        <tbody><tr>
+            <td class="matching-numbering">A.</td>
+            <td>
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>name</p>
+  </div>
+ 
+
+</td>
+          </tr>
+        <tr>
+            <td class="matching-numbering">B.</td>
+            <td>
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>type</p>
+  </div>
+ 
+
+</td>
+          </tr>
+        <tr>
+            <td class="matching-numbering">C.</td>
+            <td>
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p style="letter-spacing: normal; margin: 5.76pt 0px 0pt 0.7in; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; line-height: 11.7px; text-indent: -0.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline; text-shadow: none !important;"><span face="Franklin Gothic Book" size="3" style="font-family: &#39;Franklin Gothic Book&#39;; font-size: medium;">firing granulation</span></p> 
+   <p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 5.76pt 0px 0pt 0.7in; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; line-height: 11.7px; text-indent: -0.3in; text-align: left; direction: ltr; unicode-bidi: embed; vertical-align: baseline;"></p> 
+   <br>
+  </div>
+ 
+
+</td>
+          </tr>
+        <tr>
+            <td class="matching-numbering">D.</td>
+            <td>
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>correlation names</p>
+  </div>
+ 
+
+</td>
+          </tr>
+        <tr>
+            <td class="matching-numbering">E.</td>
+            <td>
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>conditional specification</p>
+  </div>
+ 
+
+</td>
+          </tr>
+        </tbody></table>
+        </div>
+      </td>
+    </tr>
+  </tbody></table>
+
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">5 points &nbsp; <input class="button-4" type="button" id="saveButton_1" onclick="javascript:saveOneItem(&#39;_9802666_1&#39;,&#39;1&#39;, true, true)" aria-label="Save Answer for Question 1" value="Save Answer"></p></span>
+  </div><div id="_9802667_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle2" class="steptitle">
+            Question 2
+      </h3>     <div id="stepcontent2" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_2">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Is the following statement true or false?</p> 
+   <p>Triggers are a type of procedure</p>
+  </div>
+ 
+</legend>
+<p>
+      <input class="spacer-tf-question" type="radio" name="tf-ans-_9802667_1" id="tf-ans-_9802667_1_1" value="true">
+      <label for="tf-ans-_9802667_1_1">True</label>
+    </p>
+    <p>
+      <input class="spacer-tf-question" type="radio" name="tf-ans-_9802667_1" id="tf-ans-_9802667_1_2" value="false">
+      <label for="tf-ans-_9802667_1_2">False</label>
+    </p>
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">1 points &nbsp; <input class="button-4" type="button" id="saveButton_2" onclick="javascript:saveOneItem(&#39;_9802667_1&#39;,&#39;2&#39;, true, true)" aria-label="Save Answer for Question 2" value="Save Answer"></p></span>
+  </div><div id="_9802668_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle3" class="steptitle">
+            Question 3
+      </h3>     <div id="stepcontent3" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_3">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Variables used in triggers need to be declared.&nbsp; Where are they declared?</p>
+  </div>
+ 
+</legend>
+<script type="text/javascript">
+            formCheckList.addElement(new Check_Answer({ref_label:"3",name:"mc-ans-_9802668_1"}));
+  </script>
+  <table class="multiple-choice-table">
+    
+    <tbody><tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802668_1_0" type="radio" value="0" name="mc-ans-_9802668_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802668_1_0"><p>Variables are declared in the declaration section beneath&nbsp;the keyword declare</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802668_1_1" type="radio" value="1" name="mc-ans-_9802668_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802668_1_1"><p>Variables&nbsp;are declared in the spec</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802668_1_2" type="radio" value="2" name="mc-ans-_9802668_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802668_1_2"><p>Variables are declared in an implicit declaration section that does not use the keyword declare</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802668_1_3" type="radio" value="3" name="mc-ans-_9802668_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802668_1_3"><p>Variables are declared and used in the body of the trigger</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      </tbody></table>
+
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">1 points &nbsp; <input class="button-4" type="button" id="saveButton_3" onclick="javascript:saveOneItem(&#39;_9802668_1&#39;,&#39;3&#39;, true, true)" aria-label="Save Answer for Question 3" value="Save Answer"></p></span>
+  </div><div id="_9802669_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle4" class="steptitle">
+            Question 4
+      </h3>     <div id="stepcontent4" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_4">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>What is the term used&nbsp;if the trigger needs to determine which DML verb cause the firing?</p>
+  </div>
+ 
+</legend>
+<script type="text/javascript">
+  formCheckList.addElement(new Check_Answer({ref_label:"4",name:"fitb-ans-_9802669_1"}));
+ </script>
+     
+  <input type="text" name="fitb-ans-_9802669_1" id="fitb-ans-_9802669_1" value="" size="20" width="30">
+
+
+ 
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">1 points &nbsp; <input class="button-4" type="button" id="saveButton_4" onclick="javascript:saveOneItem(&#39;_9802669_1&#39;,&#39;4&#39;, true, true)" aria-label="Save Answer for Question 4" value="Save Answer"></p></span>
+  </div><div id="_9802670_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle5" class="steptitle">
+            Question 5
+      </h3>     <div id="stepcontent5" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_5">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>How do you run a trigger?</p>
+  </div>
+ 
+</legend>
+<script type="text/javascript">
+            formCheckList.addElement(new Check_Answer({ref_label:"5",name:"mc-ans-_9802670_1"}));
+  </script>
+  <table class="multiple-choice-table">
+    
+    <tbody><tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802670_1_0" type="radio" value="0" name="mc-ans-_9802670_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802670_1_0"><p>exec trigger_name</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802670_1_1" type="radio" value="1" name="mc-ans-_9802670_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802670_1_1"><p>called on the right hand side of an assignment statement</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802670_1_2" type="radio" value="2" name="mc-ans-_9802670_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802670_1_2"><p>fired when a specific condition is true</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802670_1_3" type="radio" value="3" name="mc-ans-_9802670_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802670_1_3"><p>run trigger</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      </tbody></table>
+
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">1 points &nbsp; <input class="button-4" type="button" id="saveButton_5" onclick="javascript:saveOneItem(&#39;_9802670_1&#39;,&#39;5&#39;, true, true)" aria-label="Save Answer for Question 5" value="Save Answer"></p></span>
+  </div><div id="_9802671_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle6" class="steptitle">
+            Question 6
+      </h3>     <div id="stepcontent6" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_6">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Which of the following might result in a trigger running?</p>
+  </div>
+ 
+</legend>
+<script type="text/javascript">
+            formCheckList.addElement(new Check_Answer({ref_label:"6",name:"mc-ans-_9802671_1"}));
+  </script>
+  <table class="multiple-choice-table">
+    
+    <tbody><tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802671_1_0" type="radio" value="0" name="mc-ans-_9802671_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802671_1_0"><p>execute trig_check_names</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802671_1_1" type="radio" value="1" name="mc-ans-_9802671_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802671_1_1"><p>vn_amount := trig_total;</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802671_1_2" type="radio" value="2" name="mc-ans-_9802671_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802671_1_2"><p>delete from customers;</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="mc-ans-_9802671_1_3" type="radio" value="3" name="mc-ans-_9802671_1" class="multiple-choice-question">
+    
+</td>
+        <td class="multiple-choice-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="mc-ans-_9802671_1_3"><p>run trig_check_names()</p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      </tbody></table>
+
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">1 points &nbsp; <input class="button-4" type="button" id="saveButton_6" onclick="javascript:saveOneItem(&#39;_9802671_1&#39;,&#39;6&#39;, true, true)" aria-label="Save Answer for Question 6" value="Save Answer"></p></span>
+  </div><div id="_9802672_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle7" class="steptitle">
+            Question 7
+      </h3>     <div id="stepcontent7" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_7">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Fill in the missing blanks in the code below</p> 
+   <br> 
+   <p><span style="color: #0000ff;">CREATE or REPLACE TRIGGER <label class="hideoff" for="fib_plus-variable-x1-id_9802672_1">Blank 1</label><input type="text" name="fib_plus-variable-x1-_9802672_1" id="fib_plus-variable-x1-id_9802672_1" title="For Blank 1" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x1-_9802672_1"}</span> ) );</script></span><span size="2" style="font-size: small;"><span style="white-space: pre;"> </span></span></p> 
+   <p><span size="2" style="font-size: small;"><span style="color: #0000ff;">BEFORE DELETE OR <label class="hideoff" for="fib_plus-variable-x2-id_9802672_1">Blank 2</label><input type="text" name="fib_plus-variable-x2-_9802672_1" id="fib_plus-variable-x2-id_9802672_1" title="For Blank 2" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x2-_9802672_1"}</span> ) );</script> OR UPDATE&nbsp; OF</span> billing_date <span style="color: #0000ff;"><label class="hideoff" for="fib_plus-variable-x3-id_9802672_1">Blank 3</label><input type="text" name="fib_plus-variable-x3-_9802672_1" id="fib_plus-variable-x3-id_9802672_1" title="For Blank 3" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x3-_9802672_1"}</span> ) );</script></span> invoices</span><span size="2" style="font-size: small;"><span style="white-space: pre;"> </span></span></p> 
+   <p><span style="color: #0000ff;"><span size="2" style="font-size: small;">FOR <label class="hideoff" for="fib_plus-variable-x4-id_9802672_1">Blank 4</label><input type="text" name="fib_plus-variable-x4-_9802672_1" id="fib_plus-variable-x4-id_9802672_1" title="For Blank 4" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x4-_9802672_1"}</span> ) );</script> ROW</span></span><br><span style="color: #0000ff;"><label class="hideoff" for="fib_plus-variable-x5-id_9802672_1">Blank 5</label><input type="text" name="fib_plus-variable-x5-_9802672_1" id="fib_plus-variable-x5-id_9802672_1" title="For Blank 5" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x5-_9802672_1"}</span> ) );</script>&nbsp;</span><span size="2" style="font-size: small;"><span style="white-space: pre;"> </span></span></p> 
+   <p><span size="2" style="font-size: small;">vc_change_type&nbsp; <span style="color: #0000ff;">CHAR</span>;</span></p> 
+   <p><span style="color: #0000ff;"><label class="hideoff" for="fib_plus-variable-x6-id_9802672_1">Blank 6</label><input type="text" name="fib_plus-variable-x6-_9802672_1" id="fib_plus-variable-x6-id_9802672_1" title="For Blank 6" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x6-_9802672_1"}</span> ) );</script></span></p> 
+   <p><span style="color: #0000ff;">IF (INSERTING OR <label class="hideoff" for="fib_plus-variable-x7-id_9802672_1">Blank 7</label><input type="text" name="fib_plus-variable-x7-_9802672_1" id="fib_plus-variable-x7-id_9802672_1" title="For Blank 7" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x7-_9802672_1"}</span> ) );</script> ) </span></p> 
+   <p><span style="color: #0000ff;">&nbsp; &nbsp; &nbsp; THEN&nbsp;</span>vc_change_type := function_name;</p> 
+   <p><span style="color: #0000ff;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label class="hideoff" for="fib_plus-variable-x8-id_9802672_1">Blank 8</label><input type="text" name="fib_plus-variable-x8-_9802672_1" id="fib_plus-variable-x8-id_9802672_1" title="For Blank 8" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x8-_9802672_1"}</span> ) );</script> DELETING </span></p> 
+   <p><span style="color: #0000ff;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label class="hideoff" for="fib_plus-variable-x9-id_9802672_1">Blank 9</label><input type="text" name="fib_plus-variable-x9-_9802672_1" id="fib_plus-variable-x9-id_9802672_1" title="For Blank 9" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x9-_9802672_1"}</span> ) );</script>&nbsp; DBMS_OUTPUT.PUT_LINE</span>('deleting');</p> 
+   <p><span style="color: #0000ff;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ELSE</span>&nbsp; &nbsp;vc_change_type := 'D';<br><span style="color: #0000ff;"><label class="hideoff" for="fib_plus-variable-x10-id_9802672_1">Blank 10</label><input type="text" name="fib_plus-variable-x10-_9802672_1" id="fib_plus-variable-x10-id_9802672_1" title="For Blank 10" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x10-_9802672_1"}</span> ) );</script>&nbsp; &nbsp; <label class="hideoff" for="fib_plus-variable-x11-id_9802672_1">Blank 11</label><input type="text" name="fib_plus-variable-x11-_9802672_1" id="fib_plus-variable-x11-id_9802672_1" title="For Blank 11" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"7", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x11-_9802672_1"}</span> ) );</script> ;</span></p> 
+   <p><span style="color: #0000ff;"></span><br><span style="color: #0000ff;">END</span> trig_predicates;</p> 
+   <p>/</p>
+  </div>
+ 
+</legend>
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">11 points &nbsp; <input class="button-4" type="button" id="saveButton_7" onclick="javascript:saveOneItem(&#39;_9802672_1&#39;,&#39;7&#39;, true, true)" aria-label="Save Answer for Question 7" value="Save Answer"></p></span>
+  </div><div id="_9802673_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle8" class="steptitle">
+            Question 8
+      </h3>     <div id="stepcontent8" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_8">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Which of the following statements are correct?</p>
+  </div>
+ 
+</legend>
+<script type="text/javascript">
+    formCheckList.addElement(new Check_Answer({ref_label:"8",name:"ma-ans-_9802673_1"}));
+  </script>
+  
+  <table class="multiple-answer-table">
+    <tbody><tr>
+        <td class="multiple-option-row">
+            <input id="ma-ans-_9802673_1_0" type="checkbox" value="0" name="ma-ans-_9802673_1">
+    
+</td>
+        <td class="multiple-answer-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802673_1_0"><p>Correlation names in the spec&nbsp;have a colon in front of them eg</p> <p>WHEN (:OLD.salary &gt; 3000)&nbsp;<br><br></p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="ma-ans-_9802673_1_1" type="checkbox" value="1" name="ma-ans-_9802673_1">
+    
+</td>
+        <td class="multiple-answer-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802673_1_1"><p><span style="color: #000000; font-family: &#39;Open Sans&#39;, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Correlation names in the&nbsp;</span>spec<span style="color: #000000; font-family: &#39;Open Sans&#39;, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">&nbsp;dont have a colon in front of them eg</span></p> <p><span style="color: #000000; font-family: &#39;Open Sans&#39;, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">WHEN (OLD.salary &gt; 3000)&nbsp;</span></p> <br></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="ma-ans-_9802673_1_2" type="checkbox" value="2" name="ma-ans-_9802673_1">
+    
+</td>
+        <td class="multiple-answer-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802673_1_2"><br> <p><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;">Correlation names in the&nbsp;</span>body<span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;">&nbsp;dont&nbsp;have a colon in front of them&nbsp;eg</span></p> <p><span size="2" style="font-family: &#39;Open Sans&#39;, sans-serif; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; color: #000000; font-size: small; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; text-shadow: none !important;">IF OLD.salary &gt; 3000 THEN …logic</span><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;"></span><span style="color: #000000; font-family: &#39;Open Sans&#39;, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">&nbsp;</span></p></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="ma-ans-_9802673_1_3" type="checkbox" value="3" name="ma-ans-_9802673_1">
+    
+</td>
+        <td class="multiple-answer-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802673_1_3"><p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;">Correlation names in the&nbsp;</span>body<span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;">&nbsp;have a colon in front of them&nbsp;eg</span>&nbsp;</p> <p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial;"><span size="2" style="font-family: &#39;Open Sans&#39;, sans-serif; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; color: #000000; font-size: small; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; text-shadow: none !important;">IF :OLD.salary &gt; 3000 THEN …logic</span><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;"></span><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">&nbsp;</span>&nbsp;</p> <br></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="ma-ans-_9802673_1_4" type="checkbox" value="4" name="ma-ans-_9802673_1">
+    
+</td>
+        <td class="multiple-answer-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802673_1_4"><p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;">Correlation names in the&nbsp;</span>body<span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;">&nbsp;and spec&nbsp;dont&nbsp;have a colon in front of them&nbsp;eg</span>&nbsp;</p> <p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial;"><span size="2" style="font-family: &#39;Open Sans&#39;, sans-serif; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; color: #000000; font-size: small; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; text-shadow: none !important;">IF OLD.salary &gt; 3000 THEN …logic</span><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;"></span><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">&nbsp;</span>&nbsp;</p> <p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial;"><span style="color: #000000; font-family: &#39;Open Sans&#39;, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">WHEN (OLD.salary &gt; 3000)&nbsp;</span></p> <br></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      <tr>
+        <td class="multiple-option-row">
+            <input id="ma-ans-_9802673_1_5" type="checkbox" value="5" name="ma-ans-_9802673_1">
+    
+</td>
+        <td class="multiple-answer-numbering multiple-option-row">
+          </td>
+        <td>
+          
+
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <label for="ma-ans-_9802673_1_5"><p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;">Correlation names in the&nbsp;</span>body<span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;">&nbsp;and&nbsp;spec&nbsp;have a colon in front of them&nbsp;eg</span>&nbsp;</p> <p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><span size="2" style="font-family: &#39;Open Sans&#39;, sans-serif; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; color: #000000; font-size: small; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; text-shadow: none !important;">IF :OLD.salary &gt; 3000 THEN …logic</span><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; float: none; display: inline !important;"></span><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">&nbsp;</span>&nbsp;</p> <p style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px 0px 1em; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: small; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;"><span style="font-family: &#39;Open Sans&#39;, sans-serif; text-shadow: none !important; letter-spacing: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-size: 13px; color: #000000; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">WHEN (:OLD.salary &gt; 3000)&nbsp;</span>&nbsp;</p> <br></label>
+  </div>
+ 
+
+</td>
+      </tr>
+      </tbody></table>
+
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">3 points &nbsp; <input class="button-4" type="button" id="saveButton_8" onclick="javascript:saveOneItem(&#39;_9802673_1&#39;,&#39;8&#39;, true, true)" aria-label="Save Answer for Question 8" value="Save Answer"></p></span>
+  </div><div id="_9802674_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle9" class="steptitle">
+            Question 9
+      </h3>     <div id="stepcontent9" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_9">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Which table would you select the following columns from?</p> 
+   <p>SELECT trigger_name, triggering_event FROM ?&nbsp;&nbsp;;</p>
+  </div>
+ 
+</legend>
+<script type="text/javascript">
+  formCheckList.addElement(new Check_Answer({ref_label:"9",name:"fitb-ans-_9802674_1"}));
+ </script>
+     
+  <input type="text" name="fitb-ans-_9802674_1" id="fitb-ans-_9802674_1" value="" size="20" width="30">
+
+
+ 
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">1 points &nbsp; <input class="button-4" type="button" id="saveButton_9" onclick="javascript:saveOneItem(&#39;_9802674_1&#39;,&#39;9&#39;, true, true)" aria-label="Save Answer for Question 9" value="Save Answer"></p></span>
+  </div><div id="_9802675_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle10" class="steptitle">
+            Question 10
+      </h3>     <div id="stepcontent10" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_10">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Fill in the blanks to write the statement that enables DBMS_OUTPUT.PUTLINE to print text to the screen</p> 
+   <br> 
+   <p><label class="hideoff" for="fib_plus-variable-x1-id_9802675_1">Blank 1</label><input type="text" name="fib_plus-variable-x1-_9802675_1" id="fib_plus-variable-x1-id_9802675_1" title="For Blank 1" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"10", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x1-_9802675_1"}</span> ) );</script>&nbsp; <label class="hideoff" for="fib_plus-variable-x2-id_9802675_1">Blank 2</label><input type="text" name="fib_plus-variable-x2-_9802675_1" id="fib_plus-variable-x2-id_9802675_1" title="For Blank 2" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"10", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x2-_9802675_1"}</span> ) );</script>&nbsp; &nbsp;<label class="hideoff" for="fib_plus-variable-x3-id_9802675_1">Blank 3</label><input type="text" name="fib_plus-variable-x3-_9802675_1" id="fib_plus-variable-x3-id_9802675_1" title="For Blank 3" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"10", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x3-_9802675_1"}</span> ) );</script></p>
+  </div>
+ 
+</legend>
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">1 points &nbsp; <input class="button-4" type="button" id="saveButton_10" onclick="javascript:saveOneItem(&#39;_9802675_1&#39;,&#39;10&#39;, true, true)" aria-label="Save Answer for Question 10" value="Save Answer"></p></span>
+  </div><div id="_9802676_1" class="takeQuestionDiv " style="position:relative;">
+       <h3 id="steptitle11" class="steptitle">
+            Question 11
+      </h3>     <div id="stepcontent11" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+
+
+<div class="field">
+
+  
+ <a class="hidden" href="https://nile.northampton.ac.uk/webapps/assessment/take/launch.jsp?course_assessment_id=_27010_1&amp;course_id=_85724_1&amp;content_id=_5042061_1&amp;step=null#" onclick="return false;" id="question_11">&nbsp;</a><fieldset><legend class="legend-visible">
+ 
+ 
+  <div class="vtbegenerated inlineVtbegenerated">
+   <p>Fill in the multiple blanks that would cause the trigger below to fire</p> 
+   <p>assume invoices only has 2 columns,&nbsp; including the primary key</p> 
+   <p>the data used should be 10009 and 22 APRIL 2020</p> 
+   <br> 
+   <p><span style="color: #000080;">CREATE OR REPLACE TRIGGER</span> trig_date_constraint</p> 
+   <p><span style="color: #000080;">BEFORE INSERT </span>&nbsp;billing_date <span style="color: #000080;">ON</span> invoices</p> 
+   <p><span style="color: #000080;">FOR EACH ROW</span></p> 
+   <p><span style="color: #000080;">WHEN</span> (<span style="color: #000080;">NEW</span>.Billing_date &gt; '21-APR-2019')</p> 
+   <p><span style="color: #000080;">BEGIN</span></p> 
+   <p><br><span size="2" style="font-size: small;"><span style="white-space: pre;"> </span><span style="color: #000080;">RAISE_APPLICATION_ERROR</span>(-20000, 'BILLING DATE MUST BE AFTER CURRENT DATE');&nbsp;</span></p> 
+   <p><br><span style="color: #000080;">END</span> trig_date_constraint;</p> 
+   <p>/</p> 
+   <br> 
+   <p><label class="hideoff" for="fib_plus-variable-x1-id_9802676_1">Blank 1</label><input type="text" name="fib_plus-variable-x1-_9802676_1" id="fib_plus-variable-x1-id_9802676_1" title="For Blank 1" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"11", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x1-_9802676_1"}</span> ) );</script>&nbsp; <label class="hideoff" for="fib_plus-variable-x2-id_9802676_1">Blank 2</label><input type="text" name="fib_plus-variable-x2-_9802676_1" id="fib_plus-variable-x2-id_9802676_1" title="For Blank 2" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"11", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x2-_9802676_1"}</span> ) );</script>&nbsp; <label class="hideoff" for="fib_plus-variable-X3-id_9802676_1">Blank 3</label><input type="text" name="fib_plus-variable-X3-_9802676_1" id="fib_plus-variable-X3-id_9802676_1" title="For Blank 3" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"11", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-X3-_9802676_1"}</span> ) );</script> ( <label class="hideoff" for="fib_plus-variable-x4-id_9802676_1">Blank 4</label><input type="text" name="fib_plus-variable-x4-_9802676_1" id="fib_plus-variable-x4-id_9802676_1" title="For Blank 4" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"11", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x4-_9802676_1"}</span> ) );</script> , <label class="hideoff" for="fib_plus-variable-x5-id_9802676_1">Blank 5</label><input type="text" name="fib_plus-variable-x5-_9802676_1" id="fib_plus-variable-x5-id_9802676_1" title="For Blank 5" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"11", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x5-_9802676_1"}</span> ) );</script> )</p> 
+   <p><label class="hideoff" for="fib_plus-variable-x6-id_9802676_1">Blank 6</label><input type="text" name="fib_plus-variable-x6-_9802676_1" id="fib_plus-variable-x6-id_9802676_1" title="For Blank 6" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"11", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x6-_9802676_1"}</span> ) );</script> ( <label class="hideoff" for="fib_plus-variable-x7-id_9802676_1">Blank 7</label><input type="text" name="fib_plus-variable-x7-_9802676_1" id="fib_plus-variable-x7-id_9802676_1" title="For Blank 7" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"11", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-x7-_9802676_1"}</span> ) );</script> , <label class="hideoff" for="fib_plus-variable-X8-id_9802676_1">Blank 8</label><input type="text" name="fib_plus-variable-X8-_9802676_1" id="fib_plus-variable-X8-id_9802676_1" title="For Blank 8" value=""><script type="text/javascript" language="javascript">formCheckList.addElement( new Check_Answer( {ref_label:"11", <span style='word-break:break-all;word-wrap:break-word'>name:"fib_plus-variable-X8-_9802676_1"}</span> ) );</script> );</p>
+  </div>
+ 
+</legend>
+
+</fieldset>
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+  <span class="stepTitleRight liveArea"><p class="taskbuttondiv">10 points &nbsp; <input class="button-4" type="button" id="saveButton_11" onclick="javascript:saveOneItem(&#39;_9802676_1&#39;,&#39;11&#39;, true, true)" aria-label="Save Answer for Question 11" value="Save Answer"></p></span>
+  </div>
+ 
+ 		 <div id="bottomSubmitPlaceHolder" style="height: 122px;"></div><div class="submitStepBottom submitStepFixed" style="width: 708px;">
+<h3 id="steptitle12" class="steptitle submittitle">
+ &nbsp;Save and Submit
+</h3>
+<p class="taskbuttonhelp">Click Save and Submit to save and submit. Click Save All Answers to save all answers.</p>
+
+<div class="taskbuttondiv_wrapper">
+<p class="taskbuttondiv" id="bottom_submitButtonRow">
+			<input id="bottom_saveAllAnswersButton" class="button-2" type="button" name="bottom_saveAllAnswersButton" role="button" value="Save All Answers" onclick="return saveAllQuestions(true);">
+			<input class="button-2" type="button" name="bottom_Close Window" role="button" value="Close Window" onclick="javascript:return closeWindow();">
+		<input class="submit button-1" name="bottom_Save and Submit" type="submit" role="button" value="Save and Submit" onclick="javascript:return assessment.doConfirmSubmit(submitAssessment);">
+
+</p>
+</div>
+
+</div>
+	
+</div>
+  <input type="hidden" name="current_question" id="current_question" value="1">
+
+
+ 
+  <input type="hidden" name="current_attempt_item_id" id="current_attempt_item_id" value="_9802664_1">
+
+
+ 
+  <input type="hidden" name="current_attempt_item_id_backup" id="current_attempt_item_id_backup" value="_9802664_1">
+
+
+ 
+  <input type="hidden" name="method" id="method" value="">
+
+
+ 
+  <input type="hidden" name="saveonequestion" id="saveonequestion" value="">
+
+
+ 
+
+</form>
+   </div>
+   
+  </div>
+  
+   </div>
+</div>
+
+  <script type="text/javascript">page.bundle.addKey('inlineconfirmation.close','Close');page.bundle.addKey('inlineconfirmation.refresh','Refresh');page.bundle.addKey('hidden.link.close.menu','End of menu. Click to return to associated item.');page.bundle.addKey('hidden.link.close.form','End of form. Click to return to associated item.');page.bundle.addKey('lightbox.loading','Loading...');page.bundle.addKey('yt.stopped','Stopped:');page.bundle.addKey('yt.playing','Playing:');page.bundle.addKey('yt.cued','Cued:');page.bundle.addKey('yt.buffering','Buffering:');page.bundle.addKey('yt.paused','Paused:');page.bundle.addKey('yt.ended','Ended:');page.bundle.addKey('yt.play','Play');page.bundle.addKey('yt.pause','Pause');page.bundle.addKey('yt.mute','Mute');page.bundle.addKey('yt.unmute','Unmute');page.bundle.addKey('lightbox.overlay','{0} has been opened as a lightbox overlaying the current page.');page.bundle.addKey('display.playerControls','Player Controls');page.bundle.addKey('display.videoPlayerControls','Video Player Controls');page.bundle.addKey('display.play','Play');page.bundle.addKey('display.stop','Stop');page.bundle.addKey('display.volumeUp','Volume Up');page.bundle.addKey('display.volumeDown','Volume Down');page.bundle.addKey('display.mute','Mute');page.bundle.addKey('display.videoStatus','Video Status');page.bundle.addKey('display.closePlayerControls','Close Player Controls');page.bundle.addKey('display.embeddedVideoPlayer','Embedded Video Player');page.bundle.addKey('display.of','of');page.bundle.addKey('display.view.on.flickr','View Photo on Flickr');page.bundle.addKey('mashups.content.data.msg','We are unable to display the mashup content. This happens if the system detects an invalid URL. Remove the mashup item and try again to resolve this issue.');page.bundle.addKey('contextmenu.frame.title','Menu frame');page.bundle.addKey('frameset.contentframe.title','Content');page.bundle.addKey('common.pair.paren','{0} ({1})');page.bundle.addKey('expandCollapse.collapse.section.nocolon','Collapse');page.bundle.addKey('expandCollapse.expand.section.nocolon','Expand');page.bundle.addKey('test.not.submitted.forced.warning','You recently left the test \'{0}\' without submitting it. It was automatically submitted for you. Contact your instructor for assistance if you did not mean to leave and submit your test.');page.bundle.addKey('survey.not.submitted.forced.warning','You recently left the survey \'{0}\' without submitting it. It was automatically submitted for you. Contact your instructor for assistance if you did not mean to leave and submit your survey.');page.bundle.addKey('test.not.submitted.warning','You recently left the test \'{0}\' without submitting it. Return to the test and click Save and Submit or contact your instructor for assistance.');page.bundle.addKey('survey.not.submitted.warning','You recently left the survey \'{0}\' without submitting it. Return to the survey and click Save and Submit or contact your instructor for assistance.');page.bundle.addKey('takeSaveAnswer','Save Answer');page.bundle.addKey('takeSaveAnswerAgain','Saved');page.bundle.addKey('take.show.test.information','Show');page.bundle.addKey('take.hide.test.information','Hide');page.bundle.addKey('confirm.delete_item','This item will be deleted. Continue?');page.bundle.addKey('confirm.delete_question.regrade','This Question will be deleted and removed from any existing attempts at using it. Attempt marks will be adjusted accordingly. Continue?');page.bundle.addKey('confirm.delete_question.regrade.survey','This Question will be deleted and removed from any existing submission. Continue?');page.bundle.addKey('confirm.remove_question_link.regrade','This Question will be removed and any existing attempt at using it updated. Attempt marks will be adjusted accordingly. Continue?');page.bundle.addKey('confirm.delete_item.regrade','This item will be deleted and removed from any existing attempts at using it. Attempt marks will be adjusted accordingly. Continue?');page.bundle.addKey('confirm.remove_question_link.regrade.survey','This Question will be removed from any existing submission. Continue?');page.bundle.addKey('confirm.delete_item.regrade.survey','This item will be deleted and removed from any existing submission. Continue?');page.bundle.addKey('confirm.delete_items_count','{0} question(s) will be deleted. Continue?');page.bundle.addKey('confirm.delete_items','The selected questions will be deleted. Continue?');page.bundle.addKey('confirm.points_change.regrade_warning','Changing the points possible will trigger a remarking of existing attempts, affecting existing marks. Do you want to continue?');page.bundle.addKey('update.input.value','Error: Specify value');page.bundle.addKey('update.input.valid.value','Error: Specify valid numeric value.');page.bundle.addKey('update.points.value','Specify points value to update.');page.bundle.addKey('update.points.valid.value','Specify points value as a valid numeric value to update.');page.bundle.addKey('update.count.value','Specify question count value to update.');page.bundle.addKey('update.count.valid.value','Specify question count value as a valid numeric value to update.');page.bundle.addKey('pop.up.blocker.enabled','Please disable the pop-up blocker and try again.');page.bundle.addKey('confirm.set_copy_link','The find question mode is not set either to copy or link. Continue?');page.bundle.addKey('cannot.submit.with.no.matching.questions','Cannot submit without at least one matching question.');page.bundle.addKey('test.not.submitted.beforeunload.warning','This test has not been submitted. Press Cancel to return to the test.');page.bundle.addKey('test.not.submitted.forced.beforeunload.warning','This test has not been submitted. Press Cancel to return to the test.');page.bundle.addKey('test.not.submitted.timer.running','The timer will continue to run.');page.bundle.addKey('survey.not.submitted.beforeunload.warning','This survey has not been submitted. Press Cancel to return to the survey.');page.bundle.addKey('survey.not.submitted.forced.beforeunload.warning','This survey has not been submitted. Press Cancel to return to the survey.');page.bundle.addKey('survey.not.submitted.timer.running','The timer will continue to run.');page.bundle.addKey('error.loading.referrers','An error occurred loading the referring tests. Please reload the page and try again.');page.bundle.addKey('qStatus.incomplete','Question Incomplete');page.bundle.addKey('take.save_answer','Save Answer');page.bundle.addKey('take.save_answer.failed','Save Answer (Failed)');page.bundle.addKey('take.save_answer.again','Saved');page.bundle.addKey('qStatus.complete','Question Complete');page.bundle.addKey('warning.taking.too.long','It is taking longer than expected to perform this save.  Click Cancel to wait for it to complete.  Click OK to reenable the save, submit and/or navigation buttons on this page, so that you can try again.');page.bundle.addKey('warning.taking.too.long.nobacktracking','It is taking longer than expected to perform this save.  Click Cancel to wait for it to complete.  Click OK to re-enable the save, submit and/or navigation buttons on this page, so you can try again.  N.B. As backtracking is disabled, if you choose OK and change your answer before continuing, it is not guaranteed to take your new answer.');page.bundle.addKey('take.dupe_save','Currently saving your answer.');page.bundle.addKey('take.save_continue','Save All Answers');page.bundle.addKey('take.save_continue.saving','Saving All Answers');page.bundle.addKey('take.dupe_warn','The requested action is being processed. Wait for confirmation.');page.bundle.addKey('question.file_upload.unsaved_warning','You recently left the test \'{0}\' without saving {1} file upload answer(s). Please return to the test, upload your file(s) and save the question(s) directly.');page.bundle.addKey('take.saving_answer','Saving Answer');page.bundle.addKey('confirm.saved_partial','Partial Answer saved (Question has not yet been completed)');page.bundle.addKey('confirm.saved_empty','Question is unanswered.');page.bundle.addKey('confirm.error','An error has occurred.  Please try re-saving your answer.');page.bundle.addKey('confirm.error_all','An error occurred saving all questions.  Please save-all again or save questions individually (Note that questions with a Saved function have already been saved)');page.bundle.addKey('confirm.saved_all','All answered questions saved.');page.bundle.addKey('add.question.before.title','Add Question Above {0}');page.bundle.addKey('add.question.after.title','Add Question Below {0}');page.bundle.addKey('continuous.save.failures','We\'re unable to save your answers.  Please check your network connection before continuing with the test.  If this problem persists, contact your system administrator.');page.bundle.addKey('set.cannot.delete.in_use','Students have already submitted tests using these questions. In order to remove them for re-marking, you must remove the whole question set.');page.bundle.addKey('gradingOptions.points_error.decimals.warning','Warning! If you set the points possible to a non-whole number, letter grades may not be assigned correctly.');</script>
+  <script type="text/javascript">
+    
+      Event.observe (window, 'load', function() {
+        displayMathImgInline( document.getElementById('bb-take-assessment').getElementsByTagName('img') );
+      });
+
+      function take_onLoad()
+      {
+    	  window.onunload = take_onUnload;
+        assessment.takePageId = 1611222578252; 
+        assessment.isOneByOne = false;
+        assessment.backtrackProhibited = false;
+        assessment.currentTestName = 'Topic 17 - Triggers';
+        window.onbeforeunload = take_onBeforeUnload;
+        window.document.assessmentInternalNavigation = false; // TODO: Rename to assessment.internalNavigation. Used when the user is navigating between questions in 1by1 this is set.
+        window.setTimeout(assessment.registerVTBEChange,1);
+        // Initial pass to update the status icons on the page and the button text
+        assessment.questionBeingSaved = -1;
+        updateQuestionStatus();
+        assessment.startAutoSave(10);
+        assessment.isSurvey = false;
+        
+        $('topbar').show();        
+      }
+      function take_onBeforeUnload(e)
+      {
+        e = e || window.event;
+        var msg = assessment.warnBeforeLeavingIfUnsavedOrUnsubmitted(assessment.isOneByOne, false, false);
+        if (typeof(msg) != 'undefined')
+        {
+          if (typeof(e) != 'undefined')
+          {
+            e.returnValue = msg;
+          }
+          return msg;
+        }
+        return;
+      }
+      function take_onUnload()
+      {
+        assessment.stopAutoSave();
+        assessment.warnOnLeaveIfUnsavedOrUnsubmitted(assessment.isOneByOne, false, false, false);
+        
+      }
+
+      function getWarningMessageBeforeLeaving()
+      {
+        return {
+          message: assessment.warnBeforeLeavingIfUnsavedOrUnsubmitted( assessment.isOneByOne,
+            false, false ),
+          locale: ''
+        };
+      }
+
+      // function stored in window to be used by Ultra
+      window.getWarningMessageBeforeLeaving = getWarningMessageBeforeLeaving;
+    </script>
+  
+  <script type="text/javascript">
+    FastInit.addOnLoad( function()
+    {
+      takeAssessment.initiateTestInformation('_996300_1_9802664_1');
+    });
+  </script>
+
+  <script type="text/javascript">
+  function jumpTo(questionNumber)
+  {
+    if (!window.document.assessmentInternalNavigation)
+    {
+      assessment.prepareForSubmit(false);
+      window.document.assessmentInternalNavigation = true;
+	  internalNavigationSafetyNet.delay(assessment.safetyNetDelay);
+	  assessment.savingRightNow = true;
+	  document.forms[ 'saveAttemptForm' ].current_question.value = questionNumber;
+	  assessment.submitAttemptForm();
+	}
+    // Do nothing if we're navigating already.  The user may be a bit confused but they will eventually get their next question 
+    return false;
+  }
+</script>
+
+  <script type="text/javascript">
+
+    var submitQuestion   = "Confirm question submission.";
+    var submitAssessment = "Test submission confirmation: Click Cancel to return to the test. Click OK to submit assessment.";
+
+    var nextQuestion = false;
+    window.document.assessmentSubmitted = false; // Used to avoid double-submitting the assessment as a whole.
+    //must be settable from the popup confirm save page
+    window.document.assessmentSaved = false; // Used to avoid double-submitting a single question's answer TODO: I think we can eliminate this flag and allow the double-submit based on all the other flags we have.  TODO: Change to assessment.assessmentSaved
+
+    function confirmSubmit(msg)
+    {
+      if (assessment.submittingRightNow)
+   	  {
+    	return false;
+ 	  }
+
+      /* Note - the submittingRightNow flag is explicitly separate from the savingRightNow flag so that we can handle the
+       * user hitting 'saveandsubmit' both while an asynchronous save is happening and while one is pending.  The savingRightNow
+       * flag saves us from a conflict with an async save and the submittingRightNow flag stops new async saves from occurring.
+       * Without this flag, if you answer your questions, hit saveandsubmit and then wait there for a while (10-30 seconds:
+       * long enough so that a background async save could have been kicked off) and then hit 'ok' - at that point in time both
+       * the background and foreground processes will submit concurrently.  By blocking the async
+       * saves while we're waiting for the user to click 'ok' we avoid this concurrent submit.
+       */
+      assessment.submittingRightNow = true;
+      assessment.savingRightNow = true;
+      assessment.backtrackProhibited = false;
+      try
+      {
+        assessment.prepareForSubmit(false);
+        var validForm = validateForm();
+	      // only show the "are you sure?" message if the validation succeeded
+	      if ( validForm && (assessment.userReallyWantsToSubmit || window.confirm(msg) ))
+	      {
+	         if ( assessment.checkAlreadySubmitted(page.bundle.getString('take.dupe_warn')))
+	         {
+	         	
+	         	 window.top.document.title = "Blackboard Learn";
+	             document.forms.saveAttemptForm.method.value = 'notajax'; // Make sure we don't go through the ajax-save logic on the server - aside from that we don't care about the method value
+	          	 return true; // The caller will submit the form after this.
+	       	 }
+	      }
+      }
+      catch (err)
+      {
+    	  // Ignore the error - just want to make sure we fall through the code below
+      }
+
+      // If we get here then either the form isn't valid to submit or the user chose not to submit
+      assessment.submittingRightNow = false;
+      assessment.savingRightNow = false;
+      return false;
+    }
+
+    function navigate(direction) {
+      if (!window.document.assessmentInternalNavigation)
+      {
+        // Set textarea value to VTBE contents:
+        window.document.assessmentInternalNavigation = true;
+        try
+        {
+            assessment.prepareForSubmit(false);
+
+	        var validForm = true;
+	        
+	        if ( validForm)
+	        {
+	          assessment.savingRightNow = true;
+	          internalNavigationSafetyNet.delay(assessment.safetyNetDelay);
+	          document.forms.saveAttemptForm.method.value = 'notajax'; // Make sure we don't go through the ajax-save logic on the server - aside from that we don't care about the method value
+              document.forms.saveAttemptForm.navigationTarget.value=direction;
+	          try
+	          {
+	            assessment.submitAttemptForm();
+	          }
+	          catch (err)
+	          {
+	            // so we can clear this in error cases:
+	          }
+              document.forms.saveAttemptForm.navigationTarget.value='';
+	        }
+	        else
+	        {
+	          window.document.assessmentInternalNavigation = false;
+	        }
+        }
+        catch (err)
+        {
+        	window.document.assessmentInternalNavigation = false;
+        }
+      }
+      return false;
+    }
+
+
+  if (window.addEventListener)
+    window.addEventListener("load", staticbar, false);
+  else if (window.attachEvent)
+   window.attachEvent("onload", staticbar);
+  else if (document.getElementById)
+    window.onload=staticbar;
+  </script>
+  <script type="text/javascript">
+  FastInit.addOnLoad( function()
+  {
+    getDisplayPreference('instructionsText');
+    getDisplayPreference('statusBlock');
+    // Make any multiple choice radio buttons on the Assessment toggable (e.g. click to pick, click to unpick)
+    assessment.initToggableMultipleChoiceRadioButtons();
+  }
+  );
+  </script>
+  
+  
+  <script type="text/javascript">
+formCheckList.addElement(new Check_Answer({ref_label:"2",name:"tf-ans-_9802667_1"}));
+</script>
+
+  <script type="text/javascript">
+  FastInit.addOnLoad( function()
+  {
+    assessment.clearQuestionModifiedStatuses();
+    assessment.addQuestionToMonitor('_9802666_1','1',false);assessment.addQuestionToMonitor('_9802667_1','2',false);assessment.addQuestionToMonitor('_9802668_1','3',false);assessment.addQuestionToMonitor('_9802669_1','4',false);assessment.addQuestionToMonitor('_9802670_1','5',false);assessment.addQuestionToMonitor('_9802671_1','6',false);assessment.addQuestionToMonitor('_9802672_1','7',false);assessment.addQuestionToMonitor('_9802673_1','8',false);assessment.addQuestionToMonitor('_9802674_1','9',false);assessment.addQuestionToMonitor('_9802675_1','10',false);assessment.addQuestionToMonitor('_9802676_1','11',false);;
+  }
+  );
+</script>
+
+  <script type="text/javascript">
+  FastInit.addOnLoad( function()
+  {
+    BrowserSpecific.disableEnterKeyInTextBoxes(document);
+  });
+</script>
+
+ 
+   <script type="text/javascript">
+   FastInit.addOnLoad( function()
+   {
+            if ( window.DWREngine )
+       {
+        try {DWREngine.beginBatch();} catch(ignore) {}
+       } 
+                page.decoratePageBanner();
+                                                             function dataCollRendererInit() {var dccform=$$('div.stepcontent input:visible[type!=hidden], div.stepcontent textarea:visible, div.stepcontent select:visible, div.stepcontent a:visible, div.stepcontent button:visible');if(dccform && dccform.length > 0){dccform[0].focus();}};
+                                                             setTimeout(function(){dataCollRendererInit();},100); 
+                                                             page.util.initPinBottomSubmitStep();
+                                                             page.util.initPinBottomSubmitStep();
+                                                             if (typeof(initEditors) == 'function') { initEditors(); }; 
+                                                             if (window['org'] && window['org']['owasp']) { org.owasp.esapi.ESAPI.initialize(); }; 
+                                                             AllyIntegration.initJWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJBTExZIiwic3ViIjoiQUxMWV9UT0tFTiIsImZpbGVJZHMiOltdLCJjb3Vyc2VSb2xlIjoidW5wcml2aWxlZ2VkIiwiaXNzIjoiR05OTk1zejQ0VGRyV2t3NGFIamNpSm5RbkZsN0J0dWwiLCJyaWNoQ29udGVudElkcyI6W10sImV4cCI6MTYxMTIyMjg3OCwiaWF0IjoxNjExMjIyNTc4LCJjb3Vyc2VJZCI6Il84NTcyNF8xIiwidXNlcklkIjoiXzI1MzE0Nl8xIn0.OjpEfDO9AffQ_Yzc0ffkWYQP8kOKBhJ1OVchfih0LOQ');
+                                                             AllyIntegration.initAllyJSConfigs('prod-eu-central-1.ally.ac','155');
+                                                             jQuery.getScript('//' + window.ALLY_CFG.baseUrl + '/integration/learn/ally.js');
+                                                             quickLinks.createHelper();
+                                                                  if ( window.DWREngine )
+       {
+         try {DWREngine.endBatch();} catch(ignore) {}
+       }
+                          BrowserSpecific.registerListeners();
+                take_onLoad();
+               });
+   </script>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Take Test_ Topic 17 - Triggers –_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-30306201-1');
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam-cell.nr-data.net","licenseKey":"232bf20b67","agent":"","beacon":"bam-cell.nr-data.net","applicationTime":218,"applicationID":"495293889","transactionName":"M1NbN0oCDxFYU0JaXAoZczBoTA0DTF5VWx0ORUk=","queueTime":0}</script>
+
+
+
+
+                 <script type="text/javascript" src="./Take Test_ Topic 17 - Triggers –_files/cdn.js.download"></script>
+           <div role="log" aria-live="assertive" aria-relevant="additions" class="ally-helper-hidden-accessible"></div></body></html>

@@ -1,0 +1,29 @@
+SELECT 
+  SUBSTR( 'Oracle Substring', 1, 6 ) SUBSTRING 
+FROM 
+  dual;
+
+ SELECT 
+  SUBSTR( 'Oracle Substring', 8 ) SUBSTRING 
+FROM 
+  dual;
+
+select INSTR('Tech on the net', 'e')   from dual;
+
+select INSTR('Tech on the net', 'e', 1, 1)   from dual;
+
+select INSTR('Tech on the net', 'e', 1, 2)  from dual;
+
+select INSTR('Tech on the net', 'e', 1, 3)  from dual;
+
+select instr('Corporate Floor','or', 3, 2) from dual;
+
+select instr('Corporate Floor','or',5,2) from dual;
+
+select instr('Corporate Floor','or', -3, 2) from dual;
+
+select INSTR('Tech on the net', 'e', -5, 2)   from dual;
+
+select INSTR('Tech on the net', 'e', -3, 2)   from dual;
+
+SELECT INSTR( 'This is a playlist', 'is',-1 ) FROM dual;

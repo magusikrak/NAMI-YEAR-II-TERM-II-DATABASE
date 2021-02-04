@@ -1,0 +1,5 @@
+Introduce Implicit and Explicit cursors
+Identify cursor attributes
+Explain the purpose of loops with cursors
+Identify the syntax of FOR and WHILE loops with cursors
+Determine which type of loop is preferable

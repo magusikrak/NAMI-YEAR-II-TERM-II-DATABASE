@@ -1,0 +1,6 @@
+Objectives:
+Review block structure
+Review the use of parameters 
+Define PL/SQL functions
+Identify the difference between procedures and functions
+Explain how to invoke functions

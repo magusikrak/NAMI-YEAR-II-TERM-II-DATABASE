@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0037)https://us.cstp.blackboard.com/v2/lti -->
+<html lang="en-US" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>CSTP UEF Integration</title>
+    <link rel="stylesheet" href="./main.css" id="pageStyle">
+    <script type="text/javascript">
+        // TODO: Remove JS variables in favor of rendering values from server.
+        const integrationHost = 'https://nile.northampton.ac.uk';
+
+        // routeName are the routes or the events that this app should be trigger, This should come from association configuration.
+        const routeName = ["bbAssist","base.modal","base.integration"];
+        // panel type is an enum, just take small and full. It should be one and it expect a string. This should come from association configuration.
+        const actionType = {"bbAssist":"full","base.modal":"modal","base.integration":"baseNav"};
+        // For future use to toggle panel
+        const shouldShowPanel = true;
+        const showModal = false;
+        let messageChannel;
+        let panelId;
+        let modalId;
+
+        const contentsToSend = {
+            tag: 'span',
+            props: {
+                style: {
+                    display: 'flex',
+                    height: '100%',
+                    width: '100%',
+                    flexDirection: 'column',
+                    alignItems: 'stretch',
+                    justifyContent: 'stretch',
+                },
+            },
+            children: [{
+                tag: 'iframe',
+                props: {
+                    style: {
+                        flex: '1 1 auto',
+                    },
+                    src: 'https://us.cstp.blackboard.com/v2/lti/1_3/bbAssist/17968dbc-4da9-4c22-b6ee-eb5f00241ba3/9c95822d31f24ad39a1413841dc649d1?bt=Oy35WNUR5yi54rckKQssl3lXgBAZ6Ju6', // CSTP App URL
+                },
+            }]
+        };
+
+        // Verify that we're in the integration iframe
+        if (!window.parent) {
+            throw new Error('Expecting to be in Learn Ultra iFrame');
+        }
+
+        // Set up the window.postMessage listener for the integration handshake
+        window.addEventListener("message", onPostMessageReceived, false);
+
+        // Send the integration handshake message to Learn Ultra. This notifies Learn Ultra that the integration has
+        window.parent.postMessage({ "type": "integration:hello" }, integrationHost);
+
+        function onPostMessageReceived(evt) {
+            // Do some basic message validation.
+            console.log('onPostMessageReceived:', evt);
+            const fromTrustedHost = evt.origin === window.__lmsHost || evt.origin === integrationHost;
+            if (!fromTrustedHost || !evt.data || !evt.data.type) {
+                console.log('onPostMessageReceived:Not trusted host');
+                return;
+            }
+            // majority of the communication between the integration and Learn Ultra will be over a "secure" MessageChannel.
+            // As response to the integration handshake, Learn Ultra will send a MessageChannel port to the integration.
+            if (evt.data.type === 'integration:hello') {
+                // Construct messageChannel
+                messageChannel = new LoggedMessageChannel(evt.ports[0]);
+                messageChannel.onmessage = onMessageFromUltra;
+
+                // Now, we need to authorize with Learn Ultra using the OAuth2 token that the server negotiated for us
+                messageChannel.postMessage({
+                    type: 'authorization:authorize',
+
+                    // This token is passed from server side
+                    token: 'Oy35WNUR5yi54rckKQssl3lXgBAZ6Ju6'
+                });
+            }
+
+        }
+
+        function onMessageFromUltra(message) {
+            // If our authorization token was valid, Learn Ultra will send us a response, notifying us that the authorization
+            // was successful
+            console.log('onMessageFromUltra:', message);
+            if (message.data.type === 'authorization:authorize') {
+                onAuthorizedWithUltra();
+                if ( isActionEnabled('baseNav') ) {
+                    createBaseNav();
+                }
+            }
+
+            // On click, route, and hover messages, we will receive an event:event, assuming you registered to the event
+            if (message.data.type === 'event:event') {
+                // validates if the event is included int he routes
+                if (message.data.eventType === 'portal:new') {
+                    const portalId = message.data.portalId;
+                    console.log('onMessageFromUltra:received new portal event: ', message.data.selector);
+                    if (actionType[message.data.selector] === 'baseNav' && message.data.selectorData?.routeName === 'bbAssist') {
+                        messageChannel.postMessage({
+                            type: 'portal:modal:close',
+                            modalId,
+                        });
+                        messageChannel.postMessage({
+                            type: 'portal:render',
+                            portalId: portalId,
+                            contents: contentsToSend
+                        });
+                    }
+                }
+            }
+
+            // Once Ultra has opened the panel, it will notify us that we can render into the panel
+            if (message.data.type === 'portal:panel:response') {
+                renderPanelContents(message);
+            }
+
+            // (10) When the help button has been clicked, we'll use the registered help provider
+            /*
+            if (message.data.type === 'help:request') {
+                // TODO: if help is provided what URL should be use? 
+                window.open('');
+                sendMessage({
+                    "type": "help:request:response",
+                    "correlationId": msg.data.correlationId
+                });
+            }
+            */
+
+            if (message.data.type === 'portal:modal:response') {
+                modalId = message.data.modalId;
+            }
+
+            if (message.data.type === 'portal:callback') {
+                switch (message.data.callbackId) {
+                    case '1':
+                        messageChannel.postMessage({
+                            type: 'portal:modal:close',
+                            modalId,
+                        });
+                        break;
+                }
+            }
+
+            if (message.data.type === 'basenav:register') {
+                if( message.data.status === 'success' && isActionEnabled('modal') && showModal === true) {
+                    createModal();
+                }
+            }
+        }
+
+        function onAuthorizedWithUltra() {
+            console.log('Authorization was successful');
+
+            // Once we are authorized, we can subscribe to events, such as telemetry events
+            messageChannel.postMessage({
+                type: 'event:subscribe',
+                subscriptions: ['route', 'click', 'portal:new', 'portal:remove', 'route:changing', 'basenav:register'],
+            });
+
+            // We can also register a help provider, such as a primary help provider that will overwrite the existing provider
+            /* messageChannel.postMessage({
+               type: 'help:register',
+               id: 'google-help-provider',
+               displayName: 'Google',
+               iconUrl: 'https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png',
+               providerType: 'primary'
+             });*/
+        }
+
+        function renderPanelContents(message) {
+            // (9) Notify Ultra to render our contents into the panel
+            if (message.data.correlationId === 'panel-1') {
+                panelId = message.data.portalId;
+                messageChannel.postMessage({
+                    type: 'portal:render',
+                    portalId: message.data.portalId,
+                    contents: contentsToSend
+                });
+            }
+        }
+
+        function createBaseNav() {
+            console.log('createBaseNav');
+            messageChannel.postMessage({
+                type: "basenav:register",
+                routeName: 'bbAssist',
+                displayName: 'Bb Assist',
+                initialContents: getNavigationContents('NEW'),
+            });
+        }
+
+        function createModal() {
+            console.log('Posting modal message');
+            messageChannel.postMessage({
+                type: 'portal:modal',
+                modalId: 'modal-1',
+                contents: {
+                    tag: 'Modal',
+                    props: {
+                        width: 'medium',
+                        onClick: {
+                            callbackId: '1',
+                            mode: 'sync'
+                        }
+                    },
+                    children: [
+                        {
+                            tag: 'ModalHeader',
+                            props: {},
+                            children: [
+                                {
+                                    tag: 'span',
+                                    children: 'Introducing Assist'
+                                }]
+                        },
+                        {
+                            tag: 'ModalBody',
+                            children: [
+                                {
+                                    tag: 'div',
+                                    props: {
+                                        style: {
+                                            marginLeft: '0',
+                                            marginTop: '0',
+                                            marginBottom: '0',
+                                            marginRight: '0',
+                                        },
+                                    },
+                                    children: [
+                                        {
+                                            tag: 'img',
+                                            props: {
+                                                src: 'https://us.cstp.blackboard.com/images/icons/bbAssist_top.png'
+                                            }
+                                        },
+                                        {
+                                            tag: 'span',
+                                            children: 'Assist is the student success hub for campus and online resources available on the desktop or on the go with the Blackboard mobile app.'
+                                        }]
+                                }]
+                        },
+                        {
+                            tag: 'ModalFooter',
+                            children: [
+                                {
+                                    tag: 'ButtonLink',
+                                    props: {
+                                        to: 'bbAssist',
+                                        style: {
+                                            marginBottom: '0',
+                                            marginTop: '0'
+                                        },
+                                        className: 'uef--button'
+                                    },
+                                    children: 'Explore Assist'
+                                }
+                            ]
+                        }
+                    ]
+                },
+            });
+        }
+
+        const getNavigationContents = (badge) => {
+            console.log('getNavigationContents');
+            return {
+                tag: 'ButtonLink',
+                props: {
+                    style: {
+                        'minHeight': '52px',
+                        'display': 'flex',
+                        'flexDirection': 'row',
+                        'justifyContent': 'flex-start',
+                        'alignItems': 'center',
+                        'width': '100%',
+                        'paddingLeft': '12px',
+                    },
+                    to: 'bbAssist',
+                    className: 'uef--base-nav-button',
+                },
+                children: [
+                    {
+                        tag: 'SvgIcon',
+                        props: {
+                            className: 'svg-icon medium-icon default',
+                            style: {
+                                display: 'inline-block',
+                                left: '12px',
+                                fontSize: '18px',
+                                lineHeight: '1.1',
+                                marginRight: '14px',
+                                textAlign: 'center',
+                                verticalAlign: 'middle',
+                            },
+                            height: '24px',
+                            width: '24px',
+                            url: 'https://nile.northampton.ac.uk/webapps/consulting-central/image/Assist.svg',
+                        }
+                    },
+                    {
+                        tag: 'span',
+                        children: 'Assist',
+                    },
+                    ...(badge ? [{
+                        tag: 'span',
+                        props: {
+                            style: {
+                                marginLeft: '10px',
+                                borderRadius: '8px',
+                                backgroundColor: '#046BF1',
+                                padding: '2px',
+                                paddingLeft: '8px',
+                                display: 'inline-block',
+                                paddingRight: '8px',
+                                fontSize: 'smaller',
+                                fontWeight: 'bold',
+                                // To prevent the default button underline from propagating to the badge
+                                display: 'inline-block',
+                            },
+                        },
+                        children: badge,
+                    }] : [])
+                ],
+            }
+        }
+
+        function isActionEnabled(action) {
+            for ( route in actionType ) {
+                var currentAction = actionType[route]
+                if (currentAction === action) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        // Sets up a way to communicate between the iframe and the integration script
+        window.addEventListener('storage', onEventFromIframe);
+        function onEventFromIframe(evt) {
+            if (evt.key !== 'event') {
+                return;
+            }
+
+            const message = JSON.parse(evt.newValue);
+            switch (message.type) {
+                // Handles when the user clicks the "close panel" button
+                case 'demo:closePanel':
+                    messageChannel.postMessage({
+                        type: 'portal:panel:close',
+                        id: panelId,
+                    });
+                    break;
+            }
+        }
+
+        /**
+         * A MessageChannel-compatible API, but with console logging.
+         */
+         function _defineProperty(obj, key, value) {
+            if (key in obj) {
+                Object.defineProperty(obj, key, {
+                value: value,
+                enumerable: true,
+                configurable: true,
+                writable: true
+                });
+            } else {
+                obj[key] = value;
+            }
+            return obj;
+        }
+
+        class LoggedMessageChannel {
+            constructor(messageChannel) {
+                _defineProperty(this, "onmessage", () => {
+                    console.log("test");
+                });
+
+                _defineProperty(this, "onMessage", (evt) => {
+                    console.log(`[UEF] From Learn Ultra:`, evt.data);
+                    this.onmessage(evt);
+                });
+
+                _defineProperty(this, "postMessage", (msg) => {
+                    console.log(`[UEF] To Learn Ultra`, msg);
+                    this.messageChannel.postMessage(msg);
+                });
+
+                this.messageChannel = messageChannel;
+                this.messageChannel.onmessage = this.onMessage;
+            }
+        }
+
+    </script>
+</head>
+
+<body>Integration has loaded. This content will not be visible to
+    the end-user
+
+
+</body></html>

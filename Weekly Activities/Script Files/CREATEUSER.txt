@@ -1,0 +1,16 @@
+connect system/manager;
+
+
+create user CSY2038 identified by CSY2038;
+grant create session to CSY2038;
+grant create table to CSY2038;
+grant create view to CSY2038;
+grant create sequence to CSY2038;
+grant create synonym to CSY2038;
+grant create procedure to CSY2038;
+grant create trigger to CSY2038;
+grant create cluster to CSY2038;
+grant create type to CSY2038;
+grant unlimited tablespace to CSY2038;
+
+alter user CSY2038 quota unlimited on system;

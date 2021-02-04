@@ -1,0 +1,19 @@
+PL/SQL Best Practices with Steven Feuerstein   
+Duration: (62:05) 
+YouTube URL:  http://www.youtube.com/watch?v=nLZlR3nSrsc
+
+Objectives:
+Streamlining and improving code
+Identifying good practice
+Writing template 'empty' structures ie inputs and outputs no content
+Single point of definition 
+Sub types
+Parameters (well named)
+Functions and procedures
+Minimising executable sections
+Testing and test scripts 
+Applying this to your assignment
+Set aside 2 hours, to take full advantage of this material
+Watch this with your assignment group
+Take notes and pause at key points then discuss and record how you can apply it to your assignment
+Make a note of the time when you pause it as its can be difficult to find the same bit again

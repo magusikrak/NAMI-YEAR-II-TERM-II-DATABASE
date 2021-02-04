@@ -1,0 +1,5 @@
+Objectives:
+Introduce triggers
+Outline trigger structure
+Introduce firing components
+Identify how to drop triggers

@@ -1,0 +1,5 @@
+Objectives:
+Introduce and practice
+Built-in numeric functions
+Built-in character functions
+List of Oracle built-in functions:  https://docs.oracle.com/database/121/SQLRF/functions.htm#SQLRF006

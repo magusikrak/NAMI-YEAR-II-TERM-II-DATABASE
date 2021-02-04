@@ -1,0 +1,6 @@
+Objectives:
+Review PL/SQL structure
+Introduce PL/SQL procedures
+Introduce naming conventions
+Determine how to create and execute PL/SQL  procedures
+Indetify parameters

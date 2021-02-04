@@ -1,0 +1,24 @@
+--@D:\DB2-term2\script_files\morefuctions.txt
+SELECT training_budget, CEIL(training_budget) ceil, FLOOR(training_budget) floor,ROUND(training_budget) round FROM companies;
+
+UPDATE companies 
+SET training_budget = training_budget+(training_budget * 0.17867865);
+
+SELECT training_budget, CEIL(training_budget) ceil, FLOOR(training_budget) floor,ROUND(training_budget) round, TRUNC(training_budget,1) trunc FROM companies;
+
+SELECT MAX(training_budget), MAX(CEIL(training_budget)) ceil, MAX(FLOOR(training_budget)) floor, MAX(ROUND(training_budget)) round,  MAX(TRUNC(training_budget,1)) trunc FROM companies;
+
+SELECT CONCAT ('Good Morning ',
+CONCAT(SUBSTR(student_firstname,1,2), SUBSTR(student_surname,1,5))) FROM students;
+
+SELECT LOWER(CONCAT(SUBSTR(student_firstname,1,2), SUBSTR(student_surname,1,5))) lower FROM students;
+
+SELECT INITCAP( CONCAT (TRIM( TRAILING ' ' FROM student_firstname) , student_surname)) initcap FROM students;
+
+SELECT INITCAP (TRIM( TRAILING ' ' FROM student_firstname)), INITCAP(student_surname) FROM students;
+
+SELECT * FROM
+(
+SELECT company_name, training_budget,  CEIL(training_budget) ceil, FLOOR(training_budget) floor,ROUND(training_budget) round FROM companies ORDER BY training_budget DESC
+)
+WHERE rownum<=1;

@@ -1,0 +1,6 @@
+Objectives:
+Determine why triggers should be used
+Establish when to use triggers
+Find triggers in the database dictionary
+Explain how and when to disable triggers
+Review how to use predicates
